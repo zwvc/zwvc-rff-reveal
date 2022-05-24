@@ -51,19 +51,17 @@ chromium-browser \
 --disable-accelerated-2d-canvas \
 --disable-speech-input \
 --disable-audio-output \
---disable-extensions \
 --disable-plugins \
 --disable-dart \
 --disable-infobars \
 --disable-software-rasterizer \
---no-default-browser-check \
 --disable-pings \
 --media-router=0 \
 --force-renderer-accessibility --disable-quic --enable-tcp-fast-open \
---no-first-run \
 --disable-web-securit \
---disable-quic \
 --ignore-gpu-blacklist \
 --enable-zero-copy \
 --force-dark-mode \
+--enable-features=VaapiVideoDecoder \
+--use-gl=desktop \
 "/home/pi/zwvc-rff-reveal/index.html"
