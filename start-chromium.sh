@@ -14,62 +14,58 @@ rm -r /home/pi/.config/chromium -f
 
 # matchbox-window-manager -use_cursor no -use_titlebar no &
 
-#Auto run
-# https://www.cnblogs.com/superelement/p/9199103.html
+# Auto run Chromium, https://www.cnblogs.com/superelement/p/9199103.html
 chromium-browser \
+`# 非ROOT用户系统要求`\
 --no-sandbox \
---window-size=1024,600 \
+`# 类似全品模式`\
 --kiosk \
+`# 屏幕大小，不确定是否有用`\
+--window-size=1024,600 \
+`# 隐身模式`\
 --incognito \
---disable-client-side-phishing-detection \
---disable-component-extensions-with-background-pages \
---disable-default-apps \
---disable-extensions \
---mute-audio \
---no-default-browser-check \
---no-first-run \
---use-fake-device-for-media-stream \
---allow-running-insecure-content \
---autoplay-policy=user-gesture-required \
---disable-background-timer-throttling \
---disable-backgrounding-occluded-windows \
---disable-features=ScriptStreaming \
+`# 禁止渲染器进程中的挂起监视器对话框`\
 --disable-hang-monitor \
---disable-ipc-flooding-protection \
+`# 跳过“初次运行”任务，实际上是否是“初次运行”`\
+--no-first-run \
+`# 禁用Web通知和推送API`\
 --disable-notifications \
---disable-popup-blocking \
---block-new-web-contents \
---disable-prompt-on-repost \
---disable-renderer-backgrounding \
---js-flags=--random-seed=1157259157 \
---enable-gpu-rasterization \
---force-gpu-rasterization \
---enable-threaded-gpu-rasterization \
---enable-hardware-overlays \
---enable-threaded-compositing \
---disable-gpu-vsync \
---disable-accelerated-2d-canvas \
---disable-speech-input \
---disable-audio-output \
---disable-plugins \
---disable-dart \
+`# 防止信息栏出现`\
 --disable-infobars \
---disable-software-rasterizer \
---disable-pings \
---media-router=0 \
---force-renderer-accessibility --disable-quic --enable-tcp-fast-open \
---disable-web-securit \
---ignore-gpu-blacklist \
+`# 在首次运行时禁用默认应用程序的安装。在自动测试期间使用`\
+--disable-default-apps \
+`# 禁用默认浏览器检查。对于我们希望避免显示默认浏览器信息栏的UI/浏览器测试很有用`\
+--no-default-browser-check \
+`# 禁用将浏览器数据同步到Google帐户`\
+--disable-sync \
+`# 禁用扩展程序`\
+--disable-extensions \
+`# 禁用插件`\
+`# --disable-plugins \\`\
+`# Specifies the flags passed to JS engine`\
+--js-flags=--random-seed=1157259157 \
+`# 默认情况下，https 页面不允许从 http 链接引用 javascript/css/plug-ins。添加这一参数会放行这些内容`\
+--allow-running-insecure-content \
+`# 不遵守同源策略`\
+--disable-web-security \
+`# 在设备允许的情况下，通过硬件覆盖启用合成单个元素`\
+`# --enable-hardware-overlays \\`\
+`# ?`\
+--enable-threaded-compositing \
+`# ?`\
+--disable-speech-input \
+`# ?`\
+--disable-audio-output \
+`# 禁用WebSpeechAPI`\
+--disable-speech-api \
+`# 停用 Dart`\
+--disable-dart \
+`# 启用直接写入与磁贴关联的GPU内存的光栅化器`\
 --enable-zero-copy \
---force-dark-mode \
---enable-features=VaapiVideoDecoder \
---use-gl=desktop \
---force-renderer-accessibility \
---enable-remote-extensions \
---enable-pinch \
+`# ?`\
+--disable-gpu-vsync \
 --flag-switches-begin \
 --enable-gpu-rasterization \
 --ignore-gpu-blocklist \
---enable-features=ParallelDownloading \
 --flag-switches-end \
 "/home/pi/zwvc-rff-reveal/index.html"
