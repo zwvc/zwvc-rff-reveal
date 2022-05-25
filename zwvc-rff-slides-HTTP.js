@@ -1,4 +1,4 @@
-zwvc_base_dir = "http://omv-buster.local:8888/";
+zwvc_base_dir = "http://omv-buster:8888";
 document.write(`
 				<section data-fullscreen data-background="black">
 					<img class="r-stretch" data-src="${zwvc_base_dir}/封面_921x1200.jpg">
