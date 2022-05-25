@@ -64,4 +64,12 @@ chromium-browser \
 --force-dark-mode \
 --enable-features=VaapiVideoDecoder \
 --use-gl=desktop \
+--force-renderer-accessibility \
+--enable-remote-extensions \
+--enable-pinch \
+--flag-switches-begin \
+--enable-gpu-rasterization \
+--ignore-gpu-blocklist \
+--enable-features=ParallelDownloading \
+--flag-switches-end \
 "/home/pi/zwvc-rff-reveal/index.html"
