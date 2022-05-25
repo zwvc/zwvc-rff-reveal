@@ -64,8 +64,4 @@ chromium-browser \
 --enable-zero-copy \
 `# ?`\
 --disable-gpu-vsync \
---flag-switches-begin \
---enable-gpu-rasterization \
---ignore-gpu-blocklist \
---flag-switches-end \
 "/home/pi/zwvc-rff-reveal/index.html"
