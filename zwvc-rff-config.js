@@ -194,7 +194,7 @@
 				//           is present on the current slide or fragment
 				// - 1+:     All slides will progress automatically at the given interval
 				// - false:  No auto-sliding, even if data-autoslide is present
-				autoSlide: 5000,
+				autoSlide: 10000,
 
 				// Stop auto-sliding after user input
 				autoSlideStoppable: false,

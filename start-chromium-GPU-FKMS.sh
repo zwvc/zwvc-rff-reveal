@@ -58,4 +58,15 @@ chromium-browser \
 --disable-dart \
 --enable-accelerated-mjpeg-decode \
 --disable-features=UseOzonePlatform \
+`# 启用直接写入与磁贴关联的GPU内存的光栅化器`\
+--enable-zero-copy \
+--enable-gpu-rasterization \
+--ignore-gpu-blocklist \
+--ignore-gpu-blacklist \
+`# Turns on out of process raster for the renderer whenever gpu raster would have been used. Enables the chromium_raster_transport extension`\
+--enable-oop-rasterization \
+--disable-gpu-driver-bug-workarounds \
+--disable-gpu-driver-workarounds \
+--enable-gpu-compositing \
+--enable-native-gpu-memory-buffers \
 "/home/pi/zwvc-rff-reveal/index.html"

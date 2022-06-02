@@ -59,3 +59,4 @@ chromium-browser \
 --enable-accelerated-mjpeg-decode \
 --disable-features=UseOzonePlatform \
 "/home/pi/zwvc-rff-reveal/index.html"
+
